@@ -3,11 +3,12 @@
   <groupId>com.facebook</groupId>
   <artifactId>facebook-android-sdk</artifactId>
   <versioning>
-    <release>3.5.0</release>
+    <release>3.5.2</release>
     <versions>
       <version>3.0.2</version>
       <version>3.5.0</version>
+      <version>3.5.2</version>
     </versions>
-    <lastUpdated>20130902084616</lastUpdated>
+    <lastUpdated>20131007061014</lastUpdated>
   </versioning>
 </metadata>
