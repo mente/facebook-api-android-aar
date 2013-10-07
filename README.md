@@ -39,7 +39,7 @@ repositories {
 
 apply plugin: 'android'
 dependencies {
-    compile 'com.facebook:facebook-android-sdk:3.0.2@aar'
+    compile 'com.facebook:facebook-android-sdk:3.5.0@aar'
     //your other dependencies
 }
 
