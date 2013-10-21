@@ -1,7 +1,7 @@
 facebook-api-android-aar
 ========================
 
-Facebook Android SDK library built with gradle in aar format for usage with android gradle build system. 
+Facebook Android SDK library built with gradle in aar format for usage with android gradle build system. Versions included: 3.0.2, 3.5.0, 3.5.2
 
 How to use
 =======================
@@ -25,7 +25,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:0.5+'
+        classpath 'com.android.tools.build:gradle:+'
     }
 }
 
@@ -39,7 +39,7 @@ repositories {
 
 apply plugin: 'android'
 dependencies {
-    compile 'com.facebook:facebook-android-sdk:3.5.0@aar'
+    compile 'com.facebook:facebook-android-sdk:3.5.2@aar'
     //your other dependencies
 }
 
