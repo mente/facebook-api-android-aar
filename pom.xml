@@ -1,0 +1,34 @@
+<project>
+	<modelVersion>4.0.0</modelVersion>
+  	<name>Maven Repo for facebook android aar artifact</name>
+  	<groupId>com.facebook</groupId>
+  	<artifactId>facebook-android-sdk</artifactId>
+  	<version>3.5.2</version>
+	<properties>
+	  <github.global.server>github</github.global.server>
+	</properties>
+	<build>
+	  <plugins>
+	    <plugin>
+	      <groupId>com.github.github</groupId>
+	      <artifactId>site-maven-plugin</artifactId>
+	      <version>0.8</version>
+	      <configuration>
+	        <message>Creating site for ${project.version}</message>
+	        <branch>refs/heads/mvn-repo</branch>
+	        <repositoryName>facebook-api-android-aar</repositoryName>
+            <repositoryOwner>mente</repositoryOwner>
+            <dryRun>true</dryRun>
+	      </configuration>
+	      <executions>
+	        <execution>
+	          <goals>
+	            <goal>site</goal>
+	          </goals>
+	          <phase>site</phase>
+	        </execution>
+	      </executions>
+	    </plugin>
+	  </plugins>
+	</build>
+</project>
