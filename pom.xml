@@ -15,10 +15,9 @@
 	      <version>0.8</version>
 	      <configuration>
 	        <message>Creating site for ${project.version}</message>
-	        <branch>refs/heads/mvn-repo</branch>
 	        <repositoryName>facebook-api-android-aar</repositoryName>
             <repositoryOwner>mente</repositoryOwner>
-            <dryRun>true</dryRun>
+            <outputDirectory>mvn-repo</outputDirectory>
 	      </configuration>
 	      <executions>
 	        <execution>
