@@ -28,5 +28,5 @@ android {
 
 
 task wrapper(type: Wrapper) {
-  gradle = "1.6"
+  gradle = "1.8"
 }
