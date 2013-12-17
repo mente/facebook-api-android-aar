@@ -11,7 +11,7 @@ buildscript {
 apply plugin: 'android-library'
 
 dependencies {
-    compile 'com.android.support:support-v4:13.0.0'
+    compile 'com.android.support:support-v4:+'
 }
 
 android {
@@ -29,4 +29,26 @@ android {
 
 task wrapper(type: Wrapper) {
   gradle = "1.8"
+}
+
+android.libraryVariants.all { variant ->
+    def name = variant.name
+    task "javadoc$name"(type: Javadoc) {
+        description = "Generates javadoc for build $name"
+        destinationDir = new File(destinationDir, variant.baseName)
+        source = files(variant.javaCompile.source)
+        classpath = files(android.plugin.runtimeJarList, variant.javaCompile.classpath)
+        classifier = 'javadoc'
+        exclude '**/R.html', '**/R.*.html', '**/index.html'
+    }
+
+    task "javadocJar$name"(type: Jar, dependsOn: "javadoc$name") {
+        classifier = 'javadoc'
+        from tasks."javadoc$name".destinationDir
+    }
+}
+
+task sources(type: Jar, dependsOn: assembleRelease) {
+    classifier = 'sources'
+    from android.sourceSets.main.allSource
 }
