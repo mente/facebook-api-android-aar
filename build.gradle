@@ -33,7 +33,7 @@ task wrapper(type: Wrapper) {
 
 android.libraryVariants.all { variant ->
     def name = variant.name
-    task "javadoc$name"(type: Javadoc) {
+    task "javadoc$name"(type: Javadoc, dependsOn: "assemble$name") {
         description = "Generates javadoc for build $name"
         destinationDir = new File(destinationDir, variant.baseName)
         source = files(variant.javaCompile.source)
