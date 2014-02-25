@@ -22,17 +22,12 @@ android {
             res.srcDirs = ['facebook-android-sdk/facebook/res']
         }
     }
-    buildToolsVersion "17.0"
-    compileSdkVersion 17
-}
-
-
-task wrapper(type: Wrapper) {
-  gradle = "1.8"
+    buildToolsVersion "19.0.1"
+    compileSdkVersion 19
 }
 
 android.libraryVariants.all { variant ->
-    def name = variant.name
+    def name = variant.name.capitalize()
     task "javadoc$name"(type: Javadoc, dependsOn: "assemble$name") {
         description = "Generates javadoc for build $name"
         destinationDir = new File(destinationDir, variant.baseName)
