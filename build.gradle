@@ -24,6 +24,9 @@ android {
     }
     buildToolsVersion "19.0.1"
     compileSdkVersion 19
+    lintOptions {
+      abortOnError false
+    }
 }
 
 android.libraryVariants.all { variant ->
