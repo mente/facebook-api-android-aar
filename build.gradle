@@ -22,7 +22,7 @@ android {
             res.srcDirs = ['facebook-android-sdk/facebook/res']
         }
     }
-    buildToolsVersion "19.0.1"
+    buildToolsVersion "19.1"
     compileSdkVersion 19
     lintOptions {
       abortOnError false
