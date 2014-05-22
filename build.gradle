@@ -1,0 +1,35 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+}
+
+apply plugin: 'maven-publish'
+
+
+publishing {
+    publications {
+        ghPages(MavenPublication) {
+        	groupId="com.facebook"
+        	artifactId="facebook-android-sdk"
+        	
+            artifact "$buildDir/libs/facebook-api-android-aar.aar"
+            artifact source: "$buildDir/libs/facebook-api-android-aar-sources.aar", classifier: "sources"
+
+            pom.withXml {
+                asNode().appendNode('description', 'Facebook Android SDK published and prepared to be used for latest Gradle system')
+                asNode().get('packaging')[0].setValue('aar')
+                def boltsDependency = asNode().appendNode('dependencies').appendNode('dependency')
+                boltsDependency.appendNode('groupId', 'fr.avianey')
+                boltsDependency.appendNode('artifactId', 'bolts-android-api')
+                boltsDependency.appendNode('version', '1+')
+            }
+        }
+    }
+
+    repositories {
+        maven {
+            url "./"
+        }
+    }
+}
