@@ -16,7 +16,7 @@ repositories {
 
 dependencies {
     compile 'com.android.support:support-v4:+'
-    compile 'fr.avianey:bolts-android-api:1+'
+    compile 'fr.avianey:bolts-android-api:1.1.0'
 }
 
 android {
