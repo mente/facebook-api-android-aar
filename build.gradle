@@ -22,7 +22,7 @@ publishing {
                 def boltsDependency = asNode().appendNode('dependencies').appendNode('dependency')
                 boltsDependency.appendNode('groupId', 'fr.avianey')
                 boltsDependency.appendNode('artifactId', 'bolts-android-api')
-                boltsDependency.appendNode('version', '1+')
+                boltsDependency.appendNode('version', '1.1.0')
             }
         }
     }

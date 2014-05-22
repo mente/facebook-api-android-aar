@@ -10,7 +10,7 @@
     <dependency>
       <groupId>fr.avianey</groupId>
       <artifactId>bolts-android-api</artifactId>
-      <version>1+</version>
+      <version>1.1.0</version>
     </dependency>
   </dependencies>
 </project>
