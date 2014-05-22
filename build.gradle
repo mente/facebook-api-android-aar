@@ -10,8 +10,13 @@ buildscript {
 
 apply plugin: 'android-library'
 
+repositories {
+    mavenCentral()
+}
+
 dependencies {
     compile 'com.android.support:support-v4:+'
+    compile 'fr.avianey:bolts-android-api:1+'
 }
 
 android {
