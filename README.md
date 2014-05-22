@@ -15,6 +15,15 @@ Before you can get aar you should checkout [facebook-android-sdk](https://github
 
 When build is finished aar file will be located in `build/libs`.
 
+WARNING for >3.14 sdk users
+=====================
+Starting from 3.14 version facebook depends on [bolts framework](https://github.com/BoltsFramework/Bolts-Android). Android gradle plugin does not resolve aar dependencies implicitly. You'll have to make it explicitly:
+```groovy
+compile ('com.facebook:facebook-android-sdk:+@aar') {
+    transitive = true
+}
+```
+
 Maven artifact
 ======================
 For a lazy people (such as I) there's a maven repository with already built facebook artifact located at http://mente.github.io/facebook-api-android-aar . `build.gradle` example:
@@ -39,7 +48,9 @@ repositories {
 
 apply plugin: 'android'
 dependencies {
-    compile 'com.facebook:facebook-android-sdk:+@aar'
+    compile ('com.facebook:facebook-android-sdk:+@aar') {
+        transitive = true
+    }
     //your other dependencies
 }
 
