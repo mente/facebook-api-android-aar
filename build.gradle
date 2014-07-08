@@ -53,5 +53,5 @@ android.libraryVariants.all { variant ->
 
 task sources(type: Jar, dependsOn: assembleRelease) {
     classifier = 'sources'
-    from android.sourceSets.main.allSource
+    from android.sourceSets.main.java
 }
