@@ -15,3 +15,5 @@ version=$1
 	-Dpackaging=aar\
 	-Dsources=build/libs/facebook-api-android-aar-sources.jar\
 	-DlocalRepositoryPath=./
+
+. update-directory-index.sh
