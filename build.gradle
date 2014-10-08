@@ -4,7 +4,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:+'
+        classpath 'com.android.tools.build:gradle:0.10.+'
     }
 }
 
@@ -15,7 +15,7 @@ repositories {
 }
 
 dependencies {
-    compile 'com.android.support:support-v4:+'
+    compile 'com.android.support:support-v4:20.+'
     compile 'fr.avianey:bolts-android-api:1.1.0'
 }
 
