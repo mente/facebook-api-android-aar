@@ -1,6 +1,9 @@
+DEPRECATED
+=======
+Facebook published own SDK to [maven](http://search.maven.org/#artifactdetails%7Ccom.facebook.android%7Cfacebook-android-sdk%7C3.20.0%7Caar). Using it is encouraged.
+
 facebook-api-android-aar
 ========================
-
 Facebook Android SDK library built with gradle in aar format for usage with android gradle build system. Versions included: 3.0.2, 3.5.0, 3.5.2, 3.6.0, 3.7.0, 3.8.0, 3.14.1, 3.15.0, 3.16, 3.17.1, 3.19.0, 3.19.1, 3.20
 
 How to use
